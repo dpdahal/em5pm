@@ -13,7 +13,7 @@ const CategorySchema = new Schema({
     parent_id:{
         type: mongoose.Schema.Types.ObjectId,
         ref: "Category",
-        default:0
+        default:null,
 
     },
     description:{
