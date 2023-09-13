@@ -4,12 +4,15 @@ import HomeComponents from '../components/pages/home/HomeComponents'
 import PageNotFound from '../components/pages/errors/PageNotFound'
 import CategortyComponents from '../components/admin/pages/CategortyComponents'
 import DashboardComponent from '../components/admin/pages/DashboardComponent'
+import RegisterComponents from '../components/auth/RegisterComponents'
 
 function RoutersComponent() {
   return (
     <React.Fragment>
         <Routes>
-            <Route path="/" element={<HomeComponents/>}/>           
+            <Route path="/" element={<HomeComponents/>}/>  
+            <Route path="/register" element={<RegisterComponents/>}/>  
+
             <Route path="dashboard">
                 <Route path="/dashboard" element={<DashboardComponent/>}/>
                 <Route path="category" element={<CategortyComponents/>}/>

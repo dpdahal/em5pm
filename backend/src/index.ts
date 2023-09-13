@@ -2,13 +2,14 @@ import express, { Application,Request,Response } from 'express';
 import dotenv from 'dotenv';
 import router from './router';
 import connection from './config/db';
-
+import cors from 'cors';
 let app : Application = express();
 app.use(express.json());
 app.use(express.urlencoded({extended:false}));
 
 dotenv.config();
-
+ 
+app.use(cors())
 app.use(router);
 
 // ========== connection to database ==========

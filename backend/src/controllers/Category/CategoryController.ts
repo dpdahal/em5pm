@@ -15,14 +15,10 @@ class CategoryController{
 
     async create(req:Request,res:Response){
         try{
-            let att = req.body.category;
-            att.map(async(name:any)=>{
-                 new Attribute({name:name}).save();
-            });
             
-            // let catData = new Category({...req.body});
-            // catData = await catData.save();
-            // return res.send(catData)
+            let catData = new Category({...req.body});
+            catData = await catData.save();
+            return res.send(catData)
 
         }catch(err){
             console.log(err);
