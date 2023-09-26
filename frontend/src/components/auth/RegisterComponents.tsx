@@ -43,6 +43,7 @@ function RegisterComponents() {
                     <div className="col-md-12">
                         <form onSubmit={handleSubmit(onSubmitHandler)}>
                             <div className="form-group mb-2">
+
                                 <input {...register("name")}
                                     placeholder="enter name" className="form-control" type="text" />
                                 <p style={{ color: "red" }}>{errors.name?.message}</p>
